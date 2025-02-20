@@ -6,7 +6,35 @@
         xmlns:local="clr-namespace:_4332Project"
         mc:Ignorable="d"
         Title="Mikhaylova4332" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
-        <TextBlock FontSize="40" FontFamily="Calibri" VerticalAlignment="Center" HorizontalAlignment="Center"> Mikhaylova Polina 4332</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock FontSize="40" 
+                   FontFamily="Calibri" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Grid.Row="0"> 
+            Mikhaylova Polina 4332
+        </TextBlock>
+        
+        <Button Grid.Row="1" 
+                HorizontalAlignment="Left"
+                Click="ExcelImportButton_Click">
+            Импорт из Excel
+        </Button>
+        
+        <Button Grid.Row="1" 
+                HorizontalAlignment="Right" Click="ExcelExportButton_Click">
+            Экспорт в Excel
+        </Button>
     </Grid>
 </Window>
